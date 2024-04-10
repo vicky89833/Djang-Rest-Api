@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
-
+import django_heroku
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -110,7 +111,7 @@ SPECTACULAR_SETTINGS = {
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 # Configure Django App for Heroku.
    
-import django_heroku 
+ 
   
 DATABASES = { 
     'default': { 
@@ -135,7 +136,7 @@ DATABASES = {
 #         'ENGINE': 'django.db.backends.sqlite3',
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
-}
+# }
 
 
 # Password validation
@@ -171,8 +172,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
-import django_heroku
-import os
+
 STATIC_ROOT = os.path.join(BASE_DIR ,"staticfiles")
 STATIC_URL = 'static/'
 django_heroku.settings(locals())
