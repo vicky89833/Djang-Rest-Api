@@ -114,14 +114,14 @@ SPECTACULAR_SETTINGS = {
  
   
 DATABASES = { 
-    'default': { 
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', 
-        'NAME': 'd92ve5q90e6pod', 
-        'USER': 'u37imlegock9nq', 
-        'PASSWORD': 'p78d622a3973b8a23bce5ea2d2ed1b3aab3a10c4b52a1398188dfd37648370490', 
-        'HOST': 'c7gljno857ucsl.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com', 
-        'PORT': '5432', 
-    } 
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd92ve5q90e6pod',
+        'USER': 'u37imlegock9nq',
+        'PASSWORD': 'p78d622a3973b8a23bce5ea2d2ed1b3aab3a10c4b52a1398188dfd37648370490',
+        'HOST': 'c7gljno857ucsl.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com',
+        'PORT': '5432',
+    }
 }
 # DATABASES = {
 #     'default': {
