@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-+2#0a84b3emma_pcjjl3p7pwafmz_wpc)s(gh^qj_@gr*3qcl7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+ALLOWED_HOSTS = ['shopping-mall.herokuapp.com']
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -109,15 +109,27 @@ SPECTACULAR_SETTINGS = {
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'shop_database',
-        'USER': 'shop_project',
-        'PASSWORD': 'shop_project',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+import django_heroku 
+  
+DATABASES = { 
+    'default': { 
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', 
+        'NAME': 'd92ve5q90e6pod', 
+        'USER': 'u37imlegock9nq', 
+        'PASSWORD': 'p78d622a3973b8a23bce5ea2d2ed1b3aab3a10c4b52a1398188dfd37648370490', 
+        'HOST': 'c7gljno857ucsl.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com', 
+        'PORT': '5432', 
+    } 
+}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'shop_database',
+#         'USER': 'shop_project',
+#         'PASSWORD': 'shop_project',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
 #         'NAME': BASE_DIR / 'db.sqlite3',
