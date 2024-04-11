@@ -24,7 +24,7 @@ class BillSerializer(serializers.ModelSerializer):
     product = serializers.PrimaryKeyRelatedField(queryset=Product.objects.all())
     total_amount = serializers.DecimalField(max_digits=10, decimal_places=2, read_only=True)
     employee = serializers.PrimaryKeyRelatedField(queryset=Employee.objects.all(), default=serializers.CurrentUserDefault())
-    print("employee object :" ,employee)
+    print("employee object :" )
     class Meta:
         model = Bill
         fields = ['id', 'customer', 'product', 'quantity', 'total_amount', 'payment_method', 'employee']
@@ -56,7 +56,7 @@ class BillSerializer(serializers.ModelSerializer):
         total_amount = product.price * quantity
         # Retrieve the authenticated user
         user = self.context['request'].user
-        print("****************** user", user,"*****************8")
+        print("****************** user","*****************8")
         # Retrieve the corresponding Employee instance for the authenticated user
         try:
             employee = Employee.objects.get(user=user)
